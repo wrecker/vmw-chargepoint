@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2015 Raju Subramanian <coder@mahesh.net>
+-->
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/cp_style.css" type="text/css">
+  </head>
+  <body>
+    {% for garage in garages %}
+    <div class="column">
+      <h2>{{ garage.name }}</h2>
+      {% for station in garage.stations %}
+      <div class="box box-v">
+        <h2>Station: {{ station.name }}</h2>
+        <p>
+        {% for port in station.ports %}
+          <img src='/static/{% if port == 1 %}green{% elif port == 0 %}red{% else %}gray{% endif %}_ball.png' width=24 height=24 alt='port status'>
+        {% endfor %}
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+    <div class="column">
+      <h2>&nbsp;</h2>
+      <p class="timestamp">Last Update: {{ last_update }}</p>
+    </div>
+    </div>
+  </body>
+</html>

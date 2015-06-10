@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+    font-family: verdana, sans-serif;
+    font-size: 18px;
+    margin: 10px 5px;
+}
+.box h2 { 
+    background:#ddd;
+    color:black;
+    padding:5px;
+    font-size: 14px;
+    margin: 0;
+}
+.box p { color:#333; padding:5px; font-size: 14px}
+.box, .box-v {
+    border:1px solid #ddd;
+    background: lightyellow;
+    width: 250px;
+    margin: 5px;
+    float:left;
+    border-radius:5px;
+    font-family: Helvetica, sans-serif;
+}
+.box-v {
+    float: None;
+}
+
+.box p {
+    text-align: center;
+}
+.box img {
+    margin: 5px 35px;
+}
+
+.column {
+    margin-right: 20px;
+    float: left;
+}
+p.timestamp {
+    font: 12px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-style: italic;
+}
