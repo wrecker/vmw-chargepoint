@@ -31,6 +31,10 @@ then
   exit
 fi
 
+# Disabling notification out of the box
+# Comment out or delete the next line to enable it.
+notify=""
+
 echo "Executing @" $(date) $notify >> $OPENSHIFT_PYTHON_LOG_DIR/get_json_cron.log
 source $VIRTUAL_ENV/bin/activate
 python $OPENSHIFT_REPO_DIR/wsgi/get_json.py $notify >> $OPENSHIFT_PYTHON_LOG_DIR/get_json_cron.log

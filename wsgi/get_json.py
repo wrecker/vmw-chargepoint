@@ -201,8 +201,13 @@ def get_json():
 def process_data(data):
     new_data = data
     # Load the existing data
-    with open(JSON_FILE, "r") as currfile:
-        curr_data = json.load(currfile)
+    curr_data = {}
+    try:
+        with open(JSON_FILE, "r") as currfile:
+            curr_data = json.load(currfile)
+    except IOError:
+        logging.error("Could not load current.json")
+
     # Compare the two
     garage_new_openings = {}
 
