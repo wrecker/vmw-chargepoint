@@ -22,6 +22,7 @@ This git repo contains all the code required to run the VMW Chargepoint Dashboar
 
 ## Enable Pushbullet Notifications
 The app has support for generating notifications using PushBullet. By default its turned off and can be enabled with a couple of lines of changes.
+
 1. Sign up for a PushBullet Account and get your API Key/Access Token from this page https://www.pushbullet.com/account. Edit the file `wsgi/.pb_key` and paste this key as the first line of the file.
 2. At the top of file `wsgi/get_json.py`, look for the comment block that starts with "Garages & Pushbullet Channels". After this block there is a dict variable named `GARAGES`. This dict is initialized with the three garage names and a corresponding pushbullet tag.
 3. Create three pushbullet channels at https://www.pushbullet.com/my-channel and update the dict `GARAGES` in `wsgi/get_json.py`.
